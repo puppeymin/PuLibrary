@@ -49,3 +49,261 @@
 22:54:38.206 [Worker-6] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
 22:54:38.206 [Worker-6] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 34 ms], [Extract Annotations = 13 ms], [Validate Annotations = 11 ms], [Find R Classes = 5 ms], [Process Annotations = 2 ms], [Extract Manifest = 1 ms], [Generate Sources = 0 ms], 
 22:54:38.207 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:57:43.363 [Worker-1] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:57:43.440 [Worker-1] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 61 elements
+22:57:43.480 [Worker-1] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:57:43.485 [Worker-1] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:57:43.487 [Worker-1] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: R
+22:57:43.489 [Worker-1] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:57:43.510 [Worker-1] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:57:43.511 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:57:43.516 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:43.517 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element EActivityHandler unvalidated by 
+22:57:43.517 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:57:43.519 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:43.519 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:43.520 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:43.520 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:43.520 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:43.520 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:43.520 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [tvTitle, listView, ivAdd, navBarGroup, et_member, et_area, et_time, et_manager]
+22:57:43.523 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:43.523 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.524 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:43.524 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.524 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:43.524 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.525 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:43.525 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.526 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_member
+22:57:43.527 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.527 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_area
+22:57:43.527 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.527 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_time
+22:57:43.528 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.528 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_manager
+22:57:43.528 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:43.528 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onComplete(android.view.View) , public void onAdd(android.view.View) , public void onSave(android.view.View) ]
+22:57:43.531 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onComplete
+22:57:43.531 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:43.531 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onAdd
+22:57:43.532 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:43.532 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onSave
+22:57:43.532 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:43.532 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:57:43.534 [Worker-1] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.dimen: 0
+22:57:43.534 [Worker-1] WARN  o.a.p.ModelValidator:69 - Element ResHandler unvalidated by 
+22:57:43.534 [Worker-1] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void init() , public void initView() , public void initView() ]
+22:57:43.545 [Worker-1] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:57:43.546 [Worker-1] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:57:43.548 [Worker-1] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 0
+22:57:43.550 [Worker-1] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:57:43.552 [Worker-1] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 112 ms], [Extract Annotations = 37 ms], [Validate Annotations = 26 ms], [Find R Classes = 14 ms], [Process Annotations = 12 ms], [Extract Manifest = 6 ms], [Generate Sources = 5 ms], 
+22:57:43.553 [Worker-1] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:57:48.822 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:57:48.823 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 61 elements
+22:57:48.839 [Worker-6] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:57:48.841 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:57:48.842 [Worker-6] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: R
+22:57:48.843 [Worker-6] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:57:48.847 [Worker-6] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:57:48.848 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:57:48.848 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:48.849 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EActivityHandler unvalidated by 
+22:57:48.849 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:57:48.849 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:48.850 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:48.850 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:48.850 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:48.851 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:57:48.851 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:57:48.851 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [listView, navBarGroup, et_time, et_area, et_member, et_manager, tvTitle, ivAdd]
+22:57:48.851 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:48.852 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.852 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:48.852 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.853 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_time
+22:57:48.853 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.853 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_area
+22:57:48.853 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.853 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_member
+22:57:48.853 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.853 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_manager
+22:57:48.854 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.854 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:48.854 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.854 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:57:48.854 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:57:48.855 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onAdd(android.view.View) , public void onComplete(android.view.View) , public void onSave(android.view.View) ]
+22:57:48.855 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onAdd
+22:57:48.856 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:48.856 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onComplete
+22:57:48.856 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:48.856 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onSave
+22:57:48.856 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:57:48.856 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:57:48.857 [Worker-6] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.dimen: 0
+22:57:48.857 [Worker-6] WARN  o.a.p.ModelValidator:69 - Element ResHandler unvalidated by 
+22:57:48.857 [Worker-6] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void init() , public void initView() , public void initView() ]
+22:57:48.858 [Worker-6] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:57:48.858 [Worker-6] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:57:48.859 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 0
+22:57:48.859 [Worker-6] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:57:48.860 [Worker-6] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 36 ms], [Extract Annotations = 16 ms], [Validate Annotations = 11 ms], [Find R Classes = 5 ms], [Extract Manifest = 2 ms], [Process Annotations = 1 ms], [Generate Sources = 0 ms], 
+22:57:48.860 [Worker-6] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:59:23.853 [Worker-0] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:59:23.855 [Worker-0] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 61 elements
+22:59:23.869 [Worker-0] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:59:23.871 [Worker-0] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:59:23.872 [Worker-0] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: R
+22:59:23.873 [Worker-0] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:59:23.877 [Worker-0] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:59:23.878 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:23.879 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:23.879 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element EActivityHandler unvalidated by 
+22:59:23.879 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:23.880 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:23.880 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:23.880 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:23.880 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:23.881 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:23.881 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:23.881 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [et_member, listView, tvTitle, navBarGroup, et_area, et_manager, et_time, ivAdd]
+22:59:23.884 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - @org.androidannotations.annotations.ViewById can only be used on an element that extends android.view.View
+22:59:23.884 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_member
+22:59:23.884 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.884 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:23.884 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.885 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:23.885 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.885 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:23.885 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.885 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - @org.androidannotations.annotations.ViewById can only be used on an element that extends android.view.View
+22:59:23.885 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_area
+22:59:23.885 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.886 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - @org.androidannotations.annotations.ViewById can only be used on an element that extends android.view.View
+22:59:23.886 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_manager
+22:59:23.889 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.889 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - @org.androidannotations.annotations.ViewById can only be used on an element that extends android.view.View
+22:59:23.889 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_time
+22:59:23.889 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.889 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:23.889 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:23.890 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onAdd(android.view.View) , public void onSave(android.view.View) , public void onComplete(android.view.View) ]
+22:59:23.890 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onAdd
+22:59:23.891 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:23.891 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onSave
+22:59:23.891 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:23.892 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onComplete
+22:59:23.892 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:23.892 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:59:23.893 [Worker-0] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.dimen: 0
+22:59:23.893 [Worker-0] WARN  o.a.p.ModelValidator:69 - Element ResHandler unvalidated by 
+22:59:23.893 [Worker-0] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void initView() , public void initView() , public void init() ]
+22:59:23.894 [Worker-0] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:59:23.895 [Worker-0] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:59:23.895 [Worker-0] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 0
+22:59:23.896 [Worker-0] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:59:23.896 [Worker-0] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 41 ms], [Validate Annotations = 17 ms], [Extract Annotations = 14 ms], [Find R Classes = 5 ms], [Extract Manifest = 2 ms], [Process Annotations = 1 ms], [Generate Sources = 1 ms], 
+22:59:23.897 [Worker-0] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:59:31.925 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:59:31.926 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 61 elements
+22:59:31.942 [Worker-3] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:59:31.944 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:59:31.945 [Worker-3] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: R
+22:59:31.945 [Worker-3] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:59:31.950 [Worker-3] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:59:31.951 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:31.952 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:31.952 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EActivityHandler unvalidated by 
+22:59:31.952 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:31.953 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:31.953 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:31.953 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:31.953 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:31.953 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.layout: 0
+22:59:31.953 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element EFragmentHandler unvalidated by 
+22:59:31.953 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [et_member, listView, et_manager, ivAdd, et_time, et_area, navBarGroup, tvTitle]
+22:59:31.954 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_member
+22:59:31.955 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.955 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:31.955 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.955 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_manager
+22:59:31.955 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.955 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:31.955 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.955 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_time
+22:59:31.956 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.956 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: et_area
+22:59:31.956 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.956 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:31.956 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.956 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.id: 0
+22:59:31.957 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ViewByIdHandler unvalidated by 
+22:59:31.957 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onComplete(android.view.View) , public void onAdd(android.view.View) , public void onSave(android.view.View) ]
+22:59:31.957 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onComplete
+22:59:31.958 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:31.958 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onAdd
+22:59:31.958 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:31.958 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource name not found in R.id: onSave
+22:59:31.958 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ClickHandler unvalidated by 
+22:59:31.958 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:59:31.959 [Worker-3] ERROR o.a.h.AnnotationHelper:128 - Resource id value not found in R.dimen: 0
+22:59:31.959 [Worker-3] WARN  o.a.p.ModelValidator:69 - Element ResHandler unvalidated by 
+22:59:31.959 [Worker-3] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void initView() , public void initView() , public void init() ]
+22:59:31.960 [Worker-3] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:59:31.961 [Worker-3] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:59:31.962 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 0
+22:59:31.962 [Worker-3] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:59:31.963 [Worker-3] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 37 ms], [Extract Annotations = 14 ms], [Validate Annotations = 10 ms], [Find R Classes = 5 ms], [Extract Manifest = 2 ms], [Process Annotations = 2 ms], [Generate Sources = 1 ms], 
+22:59:31.963 [Worker-3] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:59:38.476 [Worker-5] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:59:38.478 [Worker-5] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 64 elements
+22:59:38.493 [Worker-5] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:59:38.496 [Worker-5] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:59:38.497 [Worker-5] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.badmintonmanager.R
+22:59:38.508 [Worker-5] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:59:38.512 [Worker-5] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:59:38.513 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:38.515 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:38.516 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [et_manager, ivAdd, listView, et_member, tvTitle, navBarGroup, et_area, et_time]
+22:59:38.518 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onAdd(android.view.View) , public void onComplete(android.view.View) , public void onSave(android.view.View) ]
+22:59:38.520 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:59:38.520 [Worker-5] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void initView() , public void init() , public void initView() ]
+22:59:38.521 [Worker-5] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:59:38.522 [Worker-5] DEBUG o.a.p.ModelProcessor:176 - Processing root elements EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:38.548 [Worker-5] DEBUG o.a.p.ModelProcessor:176 - Processing root elements EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:38.552 [Worker-5] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:59:38.556 [Worker-5] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 4
+22:59:38.557 [Worker-5] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:59:38.557 [Worker-5] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.AddMatchFragment_
+22:59:38.569 [Worker-5] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.MainActivity_
+22:59:38.574 [Worker-5] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.NavBarFragment_
+22:59:38.577 [Worker-5] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.OpenFragment_
+22:59:38.580 [Worker-5] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 102 ms], [Process Annotations = 35 ms], [Generate Sources = 24 ms], [Find R Classes = 16 ms], [Extract Annotations = 15 ms], [Validate Annotations = 9 ms], [Extract Manifest = 3 ms], 
+22:59:38.580 [Worker-5] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
+22:59:40.19 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:83 - Initialize AndroidAnnotations 3.3.1 with options {phase=BUILD}
+22:59:40.20 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:107 - Start processing for 6 annotations on 64 elements
+22:59:40.34 [Worker-2] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1: F:\git\GitHub\PuLibrary\badmintonManager\badmintonManager_v0.1\AndroidManifest.xml
+22:59:40.35 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:170 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.badmintonmanager, componentQualifiedNames=[com.example.badmintonmanager.MainActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.GET_TASKS, android.permission.GET_ACCOUNTS, android.permission.USE_CREDENTIALS, android.permission.MANAGE_ACCOUNTS, android.permission.AUTHENTICATE_ACCOUNTS, android.permission.ACCESS_NETWORK_STATE, android.permission.INTERNET, com.android.launcher.permission.READ_SETTINGS, android.permission.CHANGE_WIFI_STATE, android.permission.ACCESS_WIFI_STATE, android.permission.READ_PHONE_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.BROADCAST_STICKY, android.permission.WRITE_SETTINGS, android.permission.READ_PHONE_STATE, android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE, android.permission.CHANGE_NETWORK_STATE, android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_PHONE_STATE, android.permission.ACCESS_WIFI_STATE, com.tencent.mtt.extension.Player, android.webkit.permission.PLUGIN], applicationClassName=com.framework.base.BaseAppcation, libraryProject=false, debugabble=false, minSdkVersion=13, maxSdkVersion=-1, targetSdkVersion=21]
+22:59:40.36 [Worker-2] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.badmintonmanager.R
+22:59:40.39 [Worker-2] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+22:59:40.43 [Worker-2] INFO  o.a.p.ModelValidator:42 - Validating elements
+22:59:40.44 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:40.45 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:40.48 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [et_time, et_area, et_manager, et_member, navBarGroup, ivAdd, listView, tvTitle]
+22:59:40.49 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void onAdd(android.view.View) , public void onSave(android.view.View) , public void onComplete(android.view.View) ]
+22:59:40.50 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with ResHandler: [slideWidth]
+22:59:40.51 [Worker-2] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [public void initView() , public void initView() , public void init() ]
+22:59:40.51 [Worker-2] INFO  o.a.p.ModelProcessor:74 - Processing root elements
+22:59:40.52 [Worker-2] DEBUG o.a.p.ModelProcessor:176 - Processing root elements EActivityHandler: [com.example.badmintonmanager.MainActivity]
+22:59:40.54 [Worker-2] DEBUG o.a.p.ModelProcessor:176 - Processing root elements EFragmentHandler: [com.example.badmintonmanager.OpenFragment, com.example.badmintonmanager.AddMatchFragment, com.example.badmintonmanager.NavBarFragment]
+22:59:40.56 [Worker-2] INFO  o.a.p.ModelProcessor:86 - Processing enclosed elements
+22:59:40.57 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:249 - Number of files generated by AndroidAnnotations: 4
+22:59:40.58 [Worker-2] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+22:59:40.58 [Worker-2] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.AddMatchFragment_
+22:59:40.61 [Worker-2] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.MainActivity_
+22:59:40.64 [Worker-2] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.NavBarFragment_
+22:59:40.67 [Worker-2] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.badmintonmanager.OpenFragment_
+22:59:40.70 [Worker-2] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 50 ms], [Generate Sources = 13 ms], [Extract Annotations = 12 ms], [Validate Annotations = 8 ms], [Find R Classes = 7 ms], [Process Annotations = 6 ms], [Extract Manifest = 2 ms], 
+22:59:40.70 [Worker-2] INFO  o.a.AndroidAnnotationProcessor:121 - Finish processing
