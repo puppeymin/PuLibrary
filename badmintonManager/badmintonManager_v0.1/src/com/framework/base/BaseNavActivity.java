@@ -11,6 +11,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -25,11 +26,22 @@ public abstract class BaseNavActivity extends BaseActivity {
 	private FragmentManager manager;
 	private List<BaseFragment> frags;
 	private FrameLayout fl_nav;
+	
 	@Override
 	public void onCreate(SharedPreferences sp, FragmentManager manager, Bundle savedInstanceState) {
 		init();
 		setContentView(R.layout.frag_base_nav);
 		this.manager = manager;
+	}
+	
+	/**
+	 * 设置title视图
+	 * @param view
+	 */
+	public void setActionTitle(Fragment fragment){
+		FragmentTransaction ft = manager.beginTransaction();
+		ft.add(R.id.fl_title_bar,fragment);
+		ft.commit();
 	}
 	
 	/**

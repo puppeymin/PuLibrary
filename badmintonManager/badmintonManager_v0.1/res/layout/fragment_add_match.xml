@@ -3,7 +3,8 @@
     xmlns:flatui="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@color/window_bg">
 
     <LinearLayout 
         android:layout_width="match_parent"
@@ -35,7 +36,7 @@
             android:layout_marginLeft="80dp"
             android:clickable="true"
             android:enabled="false"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:hint="点击输入时间"
             android:inputType="text" 
             flatui:fl_fieldStyle="fl_box"
@@ -70,8 +71,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="80dp"
             android:clickable="true"
-            android:enabled="false"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:hint="输入场地号"
             android:inputType="text"
             flatui:fl_fieldStyle="fl_box"
@@ -106,8 +106,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="80dp"
             android:clickable="true"
-            android:enabled="false"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:hint="输入场地号"
             android:inputType="text"
             flatui:fl_fieldStyle="fl_box"
@@ -142,9 +141,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="80dp"
             android:clickable="true"
-            android:enabled="false"
             android:hint="输入参与人姓名,用,隔开"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:inputType="text"
             flatui:fl_fieldStyle="fl_box"
             flatui:fl_theme="@array/deep" />

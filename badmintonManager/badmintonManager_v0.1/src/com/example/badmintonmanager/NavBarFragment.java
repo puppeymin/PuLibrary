@@ -18,10 +18,6 @@ import de.greenrobot.event.EventBus;
 @EFragment(R.layout.fragment_nav)
 public class NavBarFragment extends BaseFragment {
 	@ViewById(R.id.rg_nav_bar) RadioGroup navBarGroup;
-
-	public interface OnInitListener{
-		public void init();
-	}
 	
 	@AfterViews
 	public void init(){
