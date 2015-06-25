@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.view.PuScrollLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
+        android:background="#c7e4f2" >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_date"
+            android:layout_alignBottom="@+id/tv_date"
+            android:layout_centerHorizontal="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_area"
+            android:layout_alignBottom="@+id/tv_area"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_date"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/tv_manager"
+            android:layout_marginBottom="8dp"
+            android:text="" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/user_list_slide_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_delete_selector"
+            android:text="删除"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</com.example.view.PuScrollLinerLayout>
