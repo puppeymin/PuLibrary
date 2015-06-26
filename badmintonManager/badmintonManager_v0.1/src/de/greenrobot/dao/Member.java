@@ -11,8 +11,8 @@ public class Member {
 
     private Long id;
     private String name;
-    private String balance;
-    private String grandTotal;
+    private Integer balance;
+    private Integer grandTotal;
 
     // KEEP FIELDS - put your custom fields here
     // KEEP FIELDS END
@@ -24,7 +24,7 @@ public class Member {
         this.id = id;
     }
 
-    public Member(Long id, String name, String balance, String grandTotal) {
+    public Member(Long id, String name, Integer balance, Integer grandTotal) {
         this.id = id;
         this.name = name;
         this.balance = balance;
@@ -47,19 +47,19 @@ public class Member {
         this.name = name;
     }
 
-    public String getBalance() {
+    public Integer getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(Integer balance) {
         this.balance = balance;
     }
 
-    public String getGrandTotal() {
+    public Integer getGrandTotal() {
         return grandTotal;
     }
 
-    public void setGrandTotal(String grandTotal) {
+    public void setGrandTotal(Integer grandTotal) {
         this.grandTotal = grandTotal;
     }
 

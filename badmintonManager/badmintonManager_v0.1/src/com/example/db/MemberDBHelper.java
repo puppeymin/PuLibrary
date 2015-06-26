@@ -8,6 +8,7 @@ import android.content.Context;
 import com.MyAppcation;
 
 import de.greenrobot.dao.Member;
+import de.greenrobot.dao.query.QueryBuilder;
 import de.greenrobot.daoexample.dao.DaoSession;
 import de.greenrobot.daoexample.dao.MemberDao;
 import de.greenrobot.daoexample.dao.MemberDao.Properties;
@@ -60,22 +61,29 @@ public class MemberDBHelper
 	/** 查询 */
 	public List<Member> getMemberInfo()
 	{
-		return instance.dbHelper.getInfos();// 查找图片相册
+		return instance.dbHelper.getInfos();
 	}
 
-	/** 查询 */
-	public List<Member> getMemberInfoById(int Id)
+	/** 通过id查询*/
+	public Member getMemberInfoById(int Id)
 	{
 		return instance.dbHelper.getInfosById(Properties.Id, Id);
 	}
 	
-	/** 查询 根据id字符串 查出menber数组 字符串用逗号隔开*/
-	public List<Member> getMemberInfoById(String ids)
+	/** 通过name查询*/
+	public Member getMemberInfoByName(String name)
+	{	
+		QueryBuilder<Member> qb = instance.memberDao.queryBuilder();
+		return qb.where(Properties.Name.eq(name)).unique();
+	}
+	
+	/** 查询 根据names字符串 查出menber数组 字符串用逗号隔开*/
+	public List<Member> getMemberInfosByName(String ids)
 	{
 		List<Member> list = new ArrayList<Member>();
 		String[] is = ids.split(",");
 		for (int i = 0; i < is.length; i++) {
-			list.addAll(instance.dbHelper.getInfosById(Properties.Id, Integer.parseInt(is[i])));
+			list.add(getMemberInfoByName(is[i]));
 		}
 		return list;
 	}
@@ -92,12 +100,15 @@ public class MemberDBHelper
 		instance.dbHelper.clearList();
 	}
 
-	/** 多重查询 */
-//	public List<Member> getIphRegionList(int cityId)
-//	{
-//		QueryBuilder<Member> qb = MemberDao.queryBuilder();
-//		qb.where(qb.and(Properties.CityId.eq(cityId), Properties.InfoType.eq(HBContant.MemberInfo_IR)));
-//		qb.orderAsc(Properties.Id);// 排序依据
-//		return qb.list();
-//	}
+	/** 通过id查询成员是否存在*/
+	public boolean isExist(int Id)
+	{
+		return instance.dbHelper.isExist(Properties.Id.eq(Id));
+	}
+	
+	/** 通过name查询成员是否存在*/
+	public boolean isExist(String name)
+	{
+		return instance.dbHelper.isExist(Properties.Name.eq(name));
+	}
 }

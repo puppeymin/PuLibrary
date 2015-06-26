@@ -6,6 +6,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.badmintonmanager.R;
@@ -32,6 +33,13 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 			viewHoder.tvArea = (TextView)convertView.findViewById(R.id.tv_area);
 			viewHoder.tvManager = (TextView)convertView.findViewById(R.id.tv_manager);
 			viewHoder.tvMember = (TextView)convertView.findViewById(R.id.tv_member);
+			viewHoder.btnDelect = (Button)convertView.findViewById(R.id.btn_delect);
+			viewHoder.btnDelect.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					
+				}
+			});
 			
 			convertView.setTag(viewHoder);
 		}else{
@@ -52,5 +60,6 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 		public TextView tvArea;
 		public TextView tvManager;
 		public TextView tvMember;
+		public Button btnDelect;
 	}
 }

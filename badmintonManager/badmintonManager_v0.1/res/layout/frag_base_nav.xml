@@ -17,8 +17,7 @@
             android:id="@+id/frame_content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
-            android:background="#ddffaa" >
+            android:layout_weight="8">
         </FrameLayout>
 
         <FrameLayout

@@ -9,7 +9,7 @@ public abstract class BaseAdapter<D> extends android.widget.BaseAdapter {
 	public List<D> data = new ArrayList<D>();
 	
 	public BaseAdapter(List<D> data) {
-		this.data.addAll(data);
+		this.data = data;
 	}
 	@Override
 	public int getCount() {

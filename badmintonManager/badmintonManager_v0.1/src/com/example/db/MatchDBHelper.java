@@ -2,16 +2,14 @@ package com.example.db;
 
 import java.util.List;
 
+import android.content.Context;
+
 import com.MyAppcation;
-import com.example.badmintonmanager.R.id;
 
 import de.greenrobot.dao.Match;
-import de.greenrobot.dao.query.DeleteQuery;
-import de.greenrobot.dao.query.QueryBuilder;
 import de.greenrobot.daoexample.dao.DaoSession;
 import de.greenrobot.daoexample.dao.MatchDao;
 import de.greenrobot.daoexample.dao.MatchDao.Properties;
-import android.content.Context;
 
 public class MatchDBHelper
 {
@@ -61,11 +59,11 @@ public class MatchDBHelper
 	/** 查询 */
 	public List<Match> getMatchInfo()
 	{
-		return instance.dbHelper.getInfos();// 查找图片相册
+		return instance.dbHelper.getInfos();
 	}
 
 	/** 查询 */
-	public List<Match> getMatchInfoByid(int Id)
+	public Match getMatchInfoByid(int Id)
 	{
 		return instance.dbHelper.getInfosById(Properties.Id, Id);
 	}

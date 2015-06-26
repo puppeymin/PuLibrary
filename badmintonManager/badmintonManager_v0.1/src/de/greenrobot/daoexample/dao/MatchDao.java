@@ -29,6 +29,8 @@ public class MatchDao extends AbstractDao<Match, Long> {
         public final static Property Manager = new Property(3, String.class, "manager", false, "MANAGER");
         public final static Property Menbers = new Property(4, String.class, "menbers", false, "MENBERS");
         public final static Property PaidMenbers = new Property(5, String.class, "paidMenbers", false, "PAID_MENBERS");
+        public final static Property Price = new Property(6, Integer.class, "price", false, "PRICE");
+        public final static Property IsComplete = new Property(7, Boolean.class, "isComplete", false, "IS_COMPLETE");
     };
 
 
@@ -49,7 +51,9 @@ public class MatchDao extends AbstractDao<Match, Long> {
                 "'AREA' TEXT," + // 2: area
                 "'MANAGER' TEXT," + // 3: manager
                 "'MENBERS' TEXT," + // 4: menbers
-                "'PAID_MENBERS' TEXT);"); // 5: paidMenbers
+                "'PAID_MENBERS' TEXT," + // 5: paidMenbers
+                "'PRICE' INTEGER," + // 6: price
+                "'IS_COMPLETE' INTEGER);"); // 7: isComplete
     }
 
     /** Drops the underlying database table. */
@@ -92,6 +96,16 @@ public class MatchDao extends AbstractDao<Match, Long> {
         if (paidMenbers != null) {
             stmt.bindString(6, paidMenbers);
         }
+ 
+        Integer price = entity.getPrice();
+        if (price != null) {
+            stmt.bindLong(7, price);
+        }
+ 
+        Boolean isComplete = entity.getIsComplete();
+        if (isComplete != null) {
+            stmt.bindLong(8, isComplete ? 1l: 0l);
+        }
     }
 
     /** @inheritdoc */
@@ -109,7 +123,9 @@ public class MatchDao extends AbstractDao<Match, Long> {
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // area
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // manager
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // menbers
-            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5) // paidMenbers
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paidMenbers
+            cursor.isNull(offset + 6) ? null : cursor.getInt(offset + 6), // price
+            cursor.isNull(offset + 7) ? null : cursor.getShort(offset + 7) != 0 // isComplete
         );
         return entity;
     }
@@ -123,6 +139,8 @@ public class MatchDao extends AbstractDao<Match, Long> {
         entity.setManager(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
         entity.setMenbers(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
         entity.setPaidMenbers(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
+        entity.setPrice(cursor.isNull(offset + 6) ? null : cursor.getInt(offset + 6));
+        entity.setIsComplete(cursor.isNull(offset + 7) ? null : cursor.getShort(offset + 7) != 0);
      }
     
     /** @inheritdoc */

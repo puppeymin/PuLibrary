@@ -10,15 +10,17 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" 
+        android:textSize="18sp"
         android:textColor="@color/white"/>
 
-    <ImageView
+    <com.example.view.PuImageButton
         android:id="@+id/iv_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="15dp"
+        android:background="@color/transparent"
         android:src="@drawable/btn_user_add" />
 
 </RelativeLayout>

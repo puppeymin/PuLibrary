@@ -11,7 +11,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Schema schema = new Schema(1, "de.greenrobot.dao");
+		Schema schema = new Schema(2, "de.greenrobot.dao");
 		schema.setDefaultJavaPackageTest("de.greenrobot.daoexample.test");
 		schema.setDefaultJavaPackageDao("de.greenrobot.daoexample.dao");
 		
@@ -20,7 +20,7 @@ public class Main {
 		addNote(schema);
 		
 		try {
-			new DaoGenerator().generateAll(schema, "../badmintonManager_v0.1/src");
+			new DaoGenerator().generateAll(schema, "../ttttt/badmintonManager/badmintonManager_v0.1/src");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -37,6 +37,8 @@ public class Main {
         match.addStringProperty("manager");
         match.addStringProperty("menbers");
         match.addStringProperty("paidMenbers");
+        match.addIntProperty("price");
+        match.addBooleanProperty("isComplete");
         
         Entity member = schema.addEntity("Member");
         
@@ -44,7 +46,7 @@ public class Main {
         
         member.addIdProperty().primaryKey().autoincrement();
         member.addStringProperty("name");
-        member.addStringProperty("balance");
-        member.addStringProperty("grandTotal");
+        member.addIntProperty("balance");
+        member.addIntProperty("grandTotal");
 	}
 }

@@ -7,6 +7,11 @@ import android.widget.Scroller;
 
 public class PuScrollLinerLayout extends LinearLayout {
 
+	public PuScrollLinerLayout(Context context) {
+		super(context);
+		init(context);
+	}
+	
 	public PuScrollLinerLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init(context);

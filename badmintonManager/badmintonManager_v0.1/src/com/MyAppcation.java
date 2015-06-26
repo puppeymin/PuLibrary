@@ -2,6 +2,7 @@ package com;
 
 import android.content.Context;
 
+import com.example.badmintonmanager.manager.MainManager;
 import com.framework.base.BaseAppcation;
 
 import de.greenrobot.daoexample.dao.DaoMaster;
@@ -12,6 +13,16 @@ public class MyAppcation extends BaseAppcation {
 
 	private static DaoMaster daoMaster;
 	private static DaoSession daoSession;
+	
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		init();
+	}
+
+	private void init() {
+		MainManager.getInstance().init();
+	}
 
 	/**
 	 * 取得DaoMaster
