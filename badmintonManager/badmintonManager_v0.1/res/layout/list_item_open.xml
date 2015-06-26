@@ -8,8 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_gravity="top"
-        android:background="#c7e4f2" >
+        android:layout_gravity="top" >
 
         <TextView
             android:id="@+id/tv_date"
@@ -55,12 +54,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <Button
+        <TextView
             android:id="@+id/btn_delect"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/btn_delete_selector"
             android:text="删除"
+            android:gravity="center"
+            android:textSize="16sp"
             android:textColor="@color/white" />
     </LinearLayout>
 

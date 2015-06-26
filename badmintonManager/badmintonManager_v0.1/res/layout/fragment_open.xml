@@ -7,8 +7,9 @@
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none" 
+        android:scrollbars="none"
+        android:listSelector="@drawable/list_ietm_selector" 
         android:divider="@color/black" 
-        android:dividerHeight="1px"/>
+        android:dividerHeight="1px" />
     
 </RelativeLayout>

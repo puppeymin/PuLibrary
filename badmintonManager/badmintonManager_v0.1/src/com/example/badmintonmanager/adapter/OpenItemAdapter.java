@@ -33,7 +33,7 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 			viewHoder.tvArea = (TextView)convertView.findViewById(R.id.tv_area);
 			viewHoder.tvManager = (TextView)convertView.findViewById(R.id.tv_manager);
 			viewHoder.tvMember = (TextView)convertView.findViewById(R.id.tv_member);
-			viewHoder.btnDelect = (Button)convertView.findViewById(R.id.btn_delect);
+			viewHoder.btnDelect = (TextView)convertView.findViewById(R.id.btn_delect);
 			viewHoder.btnDelect.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -60,6 +60,6 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 		public TextView tvArea;
 		public TextView tvManager;
 		public TextView tvMember;
-		public Button btnDelect;
+		public TextView btnDelect;
 	}
 }

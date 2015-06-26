@@ -48,11 +48,15 @@
             android:name=".MainActivity_"
             android:label="@string/app_name" 
             android:theme="@style/AppActionBarTheme" >
-            <intent-filter>
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        ，		<activity 
+       	 	android:name="com.example.badmintonmanager.TestActivity">
+           
         </activity>
     </application>
 

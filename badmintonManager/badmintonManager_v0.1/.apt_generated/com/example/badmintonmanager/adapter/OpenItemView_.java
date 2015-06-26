@@ -81,10 +81,10 @@ public final class OpenItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tvManager = ((TextView) hasViews.findViewById(id.tv_manager));
         tvDate = ((TextView) hasViews.findViewById(id.tv_date));
-        tvMember = ((TextView) hasViews.findViewById(id.tv_member));
+        tvManager = ((TextView) hasViews.findViewById(id.tv_manager));
         tvArea = ((TextView) hasViews.findViewById(id.tv_area));
+        tvMember = ((TextView) hasViews.findViewById(id.tv_member));
         {
             View view = hasViews.findViewById(id.btn_delect);
             if (view!= null) {
