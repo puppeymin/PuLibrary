@@ -2,8 +2,11 @@ package com.example.badmintonmanager.manager;
 
 import java.util.List;
 
+import android.R.integer;
+
 import com.MyAppcation;
 import com.example.badmintonmanager.modelView.MainModel;
+import com.example.badmintonmanager.modle.MatchMember;
 import com.example.db.MatchDBHelper;
 import com.example.db.MemberDBHelper;
 import com.example.event.AddMatchCallbackEvent;
@@ -45,8 +48,28 @@ public class MainManager {
 	public void addNewMember(Member member, boolean notify){
 		mainModel.addNewMember(member, notify);
 	}
+	
+	public List<MatchMember> getMatchMemberDates(Match match){
+		return mainModel.getMatchMemberDates(match);
+	}
+	
+	public void delectMember(Long Id, List<Integer> deleteIds, boolean notify){
+		mainModel.delectMember(Id, deleteIds, notify);
+	}
+	
+	public void updatepMatchMember(Long Id, boolean notify){
+		mainModel.updateMatch(Id, notify);
+	}
+	
+	public void saveMatch(Long Id, boolean notify){
+		mainModel.saveMatch(Id, notify);
+	}
 
 	public List<Match> getMatchs() {
 		return matchs;
+	}
+
+	public void delectMatch(Long id, boolean notify) {
+		mainModel.delectMatch(id, notify);
 	}
 }

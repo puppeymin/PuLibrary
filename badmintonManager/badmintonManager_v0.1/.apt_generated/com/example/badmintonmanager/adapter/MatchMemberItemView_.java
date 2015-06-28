@@ -8,9 +8,8 @@ package com.example.badmintonmanager.adapter;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
+import com.cengalabs.flatui.views.FlatCheckBox;
 import com.example.badmintonmanager.R.id;
 import com.example.badmintonmanager.R.layout;
 import org.androidannotations.api.view.HasViews;
@@ -26,26 +25,26 @@ import org.androidannotations.api.view.OnViewChangedNotifier;
  * 
  */
 @SuppressWarnings("unused")
-public final class OpenItemView_
-    extends OpenItemView
+public final class MatchMemberItemView_
+    extends MatchMemberItemView
     implements HasViews, OnViewChangedListener
 {
 
     private boolean alreadyInflated_ = false;
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
 
-    public OpenItemView_(Context context) {
+    public MatchMemberItemView_(Context context) {
         super(context);
         init_();
     }
 
-    public OpenItemView_(Context context, AttributeSet attrs) {
+    public MatchMemberItemView_(Context context, AttributeSet attrs) {
         super(context, attrs);
         init_();
     }
 
-    public static OpenItemView build(Context context) {
-        OpenItemView_ instance = new OpenItemView_(context);
+    public static MatchMemberItemView build(Context context) {
+        MatchMemberItemView_ instance = new MatchMemberItemView_(context);
         instance.onFinishInflate();
         return instance;
     }
@@ -61,7 +60,7 @@ public final class OpenItemView_
     public void onFinishInflate() {
         if (!alreadyInflated_) {
             alreadyInflated_ = true;
-            inflate(getContext(), layout.list_item_open, this);
+            inflate(getContext(), layout.list_item_match_member, this);
             onViewChangedNotifier_.notifyViewChanged(this);
         }
         super.onFinishInflate();
@@ -73,33 +72,17 @@ public final class OpenItemView_
         OnViewChangedNotifier.replaceNotifier(previousNotifier);
     }
 
-    public static OpenItemView build(Context context, AttributeSet attrs) {
-        OpenItemView_ instance = new OpenItemView_(context, attrs);
+    public static MatchMemberItemView build(Context context, AttributeSet attrs) {
+        MatchMemberItemView_ instance = new MatchMemberItemView_(context, attrs);
         instance.onFinishInflate();
         return instance;
     }
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tvMember = ((TextView) hasViews.findViewById(id.tv_member));
-        tvArea = ((TextView) hasViews.findViewById(id.tv_area));
-        tvManager = ((TextView) hasViews.findViewById(id.tv_manager));
-        tvDate = ((TextView) hasViews.findViewById(id.tv_date));
-        {
-            View view = hasViews.findViewById(id.btn_delect);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        OpenItemView_.this.delect(view);
-                    }
-
-                }
-                );
-            }
-        }
+        tvName = ((TextView) hasViews.findViewById(id.tv_name));
+        fcPay = ((FlatCheckBox) hasViews.findViewById(id.fc_pay));
+        fcDelete = ((FlatCheckBox) hasViews.findViewById(id.fc_delect));
     }
 
 }

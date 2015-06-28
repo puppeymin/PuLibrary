@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.badmintonmanager.R;
+import com.example.badmintonmanager.manager.MainManager;
 import com.framework.base.BaseAdapter;
 
 import de.greenrobot.dao.Match;
@@ -23,7 +24,7 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		ViewHoder viewHoder = null;
 		if(convertView == null){
 			viewHoder = new ViewHoder();
@@ -37,7 +38,7 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 			viewHoder.btnDelect.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					MainManager.getInstance().delectMatch(data.get(position).getId(), true);
 				}
 			});
 			
@@ -49,7 +50,7 @@ public class OpenItemAdapter extends BaseAdapter<Match> {
 		viewHoder.tvDate.setText(data.get(position).getDateString());
 		viewHoder.tvArea.setText(data.get(position).getArea());
 		viewHoder.tvManager.setText(data.get(position).getManager());
-		viewHoder.tvMember.setText(data.get(position).getMenbersString());
+		viewHoder.tvMember.setText(data.get(position).getMembersString());
 		
 		return convertView;
 	}

@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 
 import com.framework.util.MyLogger;
@@ -15,7 +17,7 @@ import com.framework.util.MyLogger;
  * @author lee
  *		无需为view设置监听操作，只需要声明一个int[]类型的ids变量，把所有要监听的控件id放到该数组中即可，同时需要继承该类
  */
-public abstract class BaseFragment extends Fragment{
+public abstract class BaseFragment extends Fragment implements OnTouchListener {
 	private SharedPreferences sp;
 	public FragmentManager manager;
 	public View view;
@@ -26,6 +28,7 @@ public abstract class BaseFragment extends Fragment{
 		Log = MyLogger.kLog();
 		manager = getFragmentManager();
 		sp = getActivity().getSharedPreferences(SPContants.CONFIG, Context.MODE_PRIVATE);
+		
 	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +39,7 @@ public abstract class BaseFragment extends Fragment{
 	@Override
 	public void onStart() {
 		super.onStart();
+		onViewCreated(getView());
 	}
 	@Override
 	public void onResume() {
@@ -53,4 +57,15 @@ public abstract class BaseFragment extends Fragment{
 	 * 界面创建完成之后
 	 */
 	public abstract void initData();
+	
+	// onTouch事件 将上层的触摸事件拦截
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        return true;
+    }
+ 
+    public void onViewCreated(View view) {
+        // 拦截触摸事件，防止泄露下去
+    	view.setOnTouchListener(this);
+    }
 }

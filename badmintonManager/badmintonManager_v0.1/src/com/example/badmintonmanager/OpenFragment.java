@@ -1,41 +1,32 @@
 package com.example.badmintonmanager;
 
-import java.util.Date;
 import java.util.List;
 
 import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.ItemClick;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.DimensionRes;
 
 import zrc.widget.ZrcListView;
-
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 
 import com.example.badmintonmanager.adapter.OpenItemAdapter;
 import com.example.badmintonmanager.manager.MainManager;
-import com.example.badmintonmanager.modelView.MainModel;
-import com.example.db.MatchDBHelper;
 import com.example.event.AddMatchCallbackEvent;
+import com.example.event.DeleteMatchEcent;
+import com.example.event.DeleteMatchMemberEvent;
 import com.example.event.MainMatchListItemClickAddEvent;
-import com.example.event.MainPopFragmentStackEvent;
+import com.example.event.MainSwitchFragment;
+import com.example.event.SaveMatchEvent;
+import com.example.event.UpdateMatchEvent;
 import com.example.view.PuPullToRefreshSlideListView;
 import com.framework.base.BaseFragment;
 
 import de.greenrobot.dao.Match;
-import de.greenrobot.daoexample.dao.DaoMaster;
-import de.greenrobot.daoexample.dao.DaoMaster.DevOpenHelper;
-import de.greenrobot.daoexample.dao.DaoSession;
-import de.greenrobot.daoexample.dao.MatchDao;
-import de.greenrobot.daoexample.dao.MatchDao.Properties;
 import de.greenrobot.event.EventBus;
 
 @EFragment(R.layout.fragment_open)
@@ -89,7 +80,27 @@ public class OpenFragment extends BaseFragment {
 	}
 
 	/////////////处理eventbus事件
+	public void onEventMainThread(MainSwitchFragment evt){
+		listView.resetItems(false);
+	}
+	
 	public void onEventMainThread(AddMatchCallbackEvent evt){
+		adapter.notifyDataSetChanged();
+	}
+	
+	public void onEventMainThread(DeleteMatchMemberEvent evt){
+		adapter.notifyDataSetChanged();
+	}
+	
+	public void onEventMainThread(UpdateMatchEvent evt){
+		adapter.notifyDataSetChanged();
+	}
+	
+	public void onEventMainThread(SaveMatchEvent evt){
+		adapter.notifyDataSetChanged();
+	}
+	
+	public void onEventMainThread(DeleteMatchEcent evt){
 		adapter.notifyDataSetChanged();
 	}
 }

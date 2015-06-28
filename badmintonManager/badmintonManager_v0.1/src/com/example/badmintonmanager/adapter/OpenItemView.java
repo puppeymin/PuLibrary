@@ -48,7 +48,7 @@ public class OpenItemView extends PuScrollLinerLayout {
 		tvDate.setText(match.getDateString());
 		tvArea.setText(match.getArea());
 		tvManager.setText(match.getManager());
-		tvMember.setText(match.getMenbersString());
+		tvMember.setText(match.getMembersString());
     }
 	
 	@Override  

@@ -14,39 +14,39 @@ public class Main {
 		Schema schema = new Schema(2, "de.greenrobot.dao");
 		schema.setDefaultJavaPackageTest("de.greenrobot.daoexample.test");
 		schema.setDefaultJavaPackageDao("de.greenrobot.daoexample.dao");
-		
+
 		schema.enableKeepSectionsByDefault();
-		
+
 		addNote(schema);
-		
+
 		try {
-			new DaoGenerator().generateAll(schema, "../ttttt/badmintonManager/badmintonManager_v0.1/src");
+			new DaoGenerator().generateAll(schema, "../badmintonManager_v0.1/src");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static void addNote(Schema schema) {
-        Entity match = schema.addEntity("Match");
-        
-        match.setTableName("MatchTable");
-        
-        match.addIdProperty().primaryKey().autoincrement();
-        match.addDateProperty("time");
-        match.addStringProperty("area");
-        match.addStringProperty("manager");
-        match.addStringProperty("menbers");
-        match.addStringProperty("paidMenbers");
-        match.addIntProperty("price");
-        match.addBooleanProperty("isComplete");
-        
-        Entity member = schema.addEntity("Member");
-        
-        member.setTableName("MemberTable");
-        
-        member.addIdProperty().primaryKey().autoincrement();
-        member.addStringProperty("name");
-        member.addIntProperty("balance");
-        member.addIntProperty("grandTotal");
+		Entity match = schema.addEntity("Match");
+
+		match.setTableName("MatchTable");
+
+		match.addIdProperty().primaryKey().autoincrement();
+		match.addDateProperty("time").notNull();
+		match.addStringProperty("area").notNull();
+		match.addStringProperty("manager").notNull();
+		match.addStringProperty("members").notNull();
+		match.addStringProperty("paidMembers");
+		match.addIntProperty("price");
+		match.addBooleanProperty("isComplete");
+
+		Entity member = schema.addEntity("Member");
+
+		member.setTableName("MemberTable");
+
+		member.addIdProperty().primaryKey().autoincrement();
+		member.addStringProperty("name");
+		member.addIntProperty("balance");
+		member.addIntProperty("grandTotal");
 	}
 }

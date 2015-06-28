@@ -68,6 +68,11 @@ public class BaseDBHelper<T,K> {
 		return qb.where(whereCondition).unique() != null;
 	}
 	
+	/** 更新数据*/
+	public void update(T t){
+		getDao().update(t);
+	}
+	
 	/** 删除 */
 	public void clearList()
 	{

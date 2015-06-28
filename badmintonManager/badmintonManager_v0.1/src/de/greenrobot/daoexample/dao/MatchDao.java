@@ -27,8 +27,8 @@ public class MatchDao extends AbstractDao<Match, Long> {
         public final static Property Time = new Property(1, java.util.Date.class, "time", false, "TIME");
         public final static Property Area = new Property(2, String.class, "area", false, "AREA");
         public final static Property Manager = new Property(3, String.class, "manager", false, "MANAGER");
-        public final static Property Menbers = new Property(4, String.class, "menbers", false, "MENBERS");
-        public final static Property PaidMenbers = new Property(5, String.class, "paidMenbers", false, "PAID_MENBERS");
+        public final static Property Members = new Property(4, String.class, "members", false, "MEMBERS");
+        public final static Property PaidMembers = new Property(5, String.class, "paidMembers", false, "PAID_MEMBERS");
         public final static Property Price = new Property(6, Integer.class, "price", false, "PRICE");
         public final static Property IsComplete = new Property(7, Boolean.class, "isComplete", false, "IS_COMPLETE");
     };
@@ -47,11 +47,11 @@ public class MatchDao extends AbstractDao<Match, Long> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "'MatchTable' (" + //
                 "'_id' INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
-                "'TIME' INTEGER," + // 1: time
-                "'AREA' TEXT," + // 2: area
-                "'MANAGER' TEXT," + // 3: manager
-                "'MENBERS' TEXT," + // 4: menbers
-                "'PAID_MENBERS' TEXT," + // 5: paidMenbers
+                "'TIME' INTEGER NOT NULL ," + // 1: time
+                "'AREA' TEXT NOT NULL ," + // 2: area
+                "'MANAGER' TEXT NOT NULL ," + // 3: manager
+                "'MEMBERS' TEXT NOT NULL ," + // 4: members
+                "'PAID_MEMBERS' TEXT," + // 5: paidMembers
                 "'PRICE' INTEGER," + // 6: price
                 "'IS_COMPLETE' INTEGER);"); // 7: isComplete
     }
@@ -71,30 +71,14 @@ public class MatchDao extends AbstractDao<Match, Long> {
         if (id != null) {
             stmt.bindLong(1, id);
         }
+        stmt.bindLong(2, entity.getTime().getTime());
+        stmt.bindString(3, entity.getArea());
+        stmt.bindString(4, entity.getManager());
+        stmt.bindString(5, entity.getMembers());
  
-        java.util.Date time = entity.getTime();
-        if (time != null) {
-            stmt.bindLong(2, time.getTime());
-        }
- 
-        String area = entity.getArea();
-        if (area != null) {
-            stmt.bindString(3, area);
-        }
- 
-        String manager = entity.getManager();
-        if (manager != null) {
-            stmt.bindString(4, manager);
-        }
- 
-        String menbers = entity.getMenbers();
-        if (menbers != null) {
-            stmt.bindString(5, menbers);
-        }
- 
-        String paidMenbers = entity.getPaidMenbers();
-        if (paidMenbers != null) {
-            stmt.bindString(6, paidMenbers);
+        String paidMembers = entity.getPaidMembers();
+        if (paidMembers != null) {
+            stmt.bindString(6, paidMembers);
         }
  
         Integer price = entity.getPrice();
@@ -119,11 +103,11 @@ public class MatchDao extends AbstractDao<Match, Long> {
     public Match readEntity(Cursor cursor, int offset) {
         Match entity = new Match( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
-            cursor.isNull(offset + 1) ? null : new java.util.Date(cursor.getLong(offset + 1)), // time
-            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // area
-            cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // manager
-            cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // menbers
-            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paidMenbers
+            new java.util.Date(cursor.getLong(offset + 1)), // time
+            cursor.getString(offset + 2), // area
+            cursor.getString(offset + 3), // manager
+            cursor.getString(offset + 4), // members
+            cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5), // paidMembers
             cursor.isNull(offset + 6) ? null : cursor.getInt(offset + 6), // price
             cursor.isNull(offset + 7) ? null : cursor.getShort(offset + 7) != 0 // isComplete
         );
@@ -134,11 +118,11 @@ public class MatchDao extends AbstractDao<Match, Long> {
     @Override
     public void readEntity(Cursor cursor, Match entity, int offset) {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
-        entity.setTime(cursor.isNull(offset + 1) ? null : new java.util.Date(cursor.getLong(offset + 1)));
-        entity.setArea(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
-        entity.setManager(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
-        entity.setMenbers(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
-        entity.setPaidMenbers(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
+        entity.setTime(new java.util.Date(cursor.getLong(offset + 1)));
+        entity.setArea(cursor.getString(offset + 2));
+        entity.setManager(cursor.getString(offset + 3));
+        entity.setMembers(cursor.getString(offset + 4));
+        entity.setPaidMembers(cursor.isNull(offset + 5) ? null : cursor.getString(offset + 5));
         entity.setPrice(cursor.isNull(offset + 6) ? null : cursor.getInt(offset + 6));
         entity.setIsComplete(cursor.isNull(offset + 7) ? null : cursor.getShort(offset + 7) != 0);
      }

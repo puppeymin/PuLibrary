@@ -79,6 +79,12 @@ public class MatchDBHelper
 	{
 		instance.dbHelper.clearList();
 	}
+	
+	/** 更新*/
+	public void updateMatchInfo(Match match)
+	{
+		instance.dbHelper.update(match);
+	}
 
 	/** 多重查询 */
 //	public List<Match> getIphRegionList(int cityId)

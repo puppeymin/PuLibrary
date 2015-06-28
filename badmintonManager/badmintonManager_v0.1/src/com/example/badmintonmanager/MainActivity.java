@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.example.event.AddMatchCallbackEvent;
 import com.example.event.MainMatchListItemClickAddEvent;
 import com.example.event.MainPopFragmentStackEvent;
+import com.example.event.MainSwitchFragment;
 import com.example.event.MainTitleClickAddEvent;
 import com.example.event.NavBarSelectEvent;
 import com.framework.base.BaseFragment;
@@ -36,10 +37,12 @@ public class MainActivity extends BaseNavActivity {
 
 	private static final String ADD_MATCH = "addMatch";
 	private static final String ADD_MEMBER = "addMember";
+	private static final String MATCH_MEMBER = "matchMember";
 
 	private NavBarFragment navBarFragment;
 	private MainTitleFragment titleBarFragment;
 	private AddMatchFragment addMatchFragment;
+	private MatchManagerFragment matchManagerFragment;
 
 	private int curIndex;
 	private ArrayList<BaseFragment> fragments;
@@ -142,12 +145,14 @@ public class MainActivity extends BaseNavActivity {
 		transaction.commit();
 	}
 
-	private void switchFragment(BaseFragment fragment){
-		if(addMatchFragment.isAdded()){
-			removeFragment(addMatchFragment);
+	private void switchFragment(BaseFragment fragment,String TAG){
+		if(fragment.isAdded()){
+			removeFragment(fragment);
 		}else{
-			addFragment(addMatchFragment,ADD_MATCH);
+			addFragment(fragment,TAG);
 		}
+		
+		EventBus.getDefault().post(new MainSwitchFragment());
 	}
 
 
@@ -161,19 +166,25 @@ public class MainActivity extends BaseNavActivity {
 		switch (curIndex) {
 		case 0:
 			if(addMatchFragment == null) addMatchFragment = AddMatchFragment_.builder().build();
-			switchFragment(addMatchFragment);
+			switchFragment(addMatchFragment, ADD_MATCH);
 			break;
 		case 1:
 
 			break;
 		}
 	}
-	
+
 	public void onEventMainThread(MainMatchListItemClickAddEvent evt){
 		switch (curIndex) {
 		case 0:
-//			if(addMatchFragment == null) addMatchFragment = AddMatchFragment_.builder().build();
-//			switchFragment(addMatchFragment);
+			if(matchManagerFragment == null)
+			{
+				matchManagerFragment = MatchManagerFragment_.builder()
+						.matchData(evt.getMatch()).build();
+			}else{
+				matchManagerFragment.setMatchData(evt.getMatch());
+			}
+			switchFragment(matchManagerFragment, MATCH_MEMBER);
 			break;
 		}
 	}
